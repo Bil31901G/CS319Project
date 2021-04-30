@@ -12,3 +12,11 @@
     clear: both;
     display: table;
   }
+
+  .columnAddGroup {
+    float: left;
+    width: 24%;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+  }

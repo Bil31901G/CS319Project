@@ -1,4 +1,5 @@
 import React from 'react'
+import AddGroupFrame from './AddGroupFrame'
 import GroupFrame from './GroupFrame'
 import "./GroupTable.css"
 
@@ -30,6 +31,10 @@ export default class GroupTable extends React.Component {
 
     }
 
+    // addGroupFrameClickHandler(){
+    //     console.log("Im clicked!");
+    // }
+
     render(){
 
         var rows = [];
@@ -37,11 +42,11 @@ export default class GroupTable extends React.Component {
             for (var i = 0; i < (this.state.availableGroupIDs.length); i++) {
                 rows.push(
                     <div key={"col " + i} className="column"  >
-                        <GroupFrame id={this.state.availableGroupIDs[i]}>
-                        </GroupFrame>
+                        <GroupFrame id={this.state.availableGroupIDs[i]}> </GroupFrame>
                     </div>)
             }
         }
+        rows.push(<div key={"AddGroupButton"} className="columnAddGroup" onClick={() =>{ alert("click")} } ><AddGroupFrame > </AddGroupFrame></div>)
         return( 
             <div>{
                 this.state.loading ? 
