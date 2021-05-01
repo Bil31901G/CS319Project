@@ -1,5 +1,8 @@
 import React from 'react'
 import axios from 'axios';
+import MyGroupTable from "../MyGroupPage/MyGroupTable"
+//import AssignmentTable from "../Assignments/AssignmentTable"
+//import JoinRequestTable from "../JoinRequests/JoinRequestTable"
 export default class UploadAssignment extends React.Component {
 
     //Şuradan çöktüm https://www.laravelcode.com/post/how-to-upload-files-in-reactjs-with-example
@@ -66,10 +69,14 @@ export default class UploadAssignment extends React.Component {
 
       render() { 
         return ( 
+
+
+
           <div> 
+          <MyGroupTable></MyGroupTable>
+//          <AssignmentTable></AssignmentTable>
+//          <JoinRequestTable></JoinRequestTable>
               <h1> 
-                GeeksforGeeks 
-                Şuradan çöktüm https://www.laravelcode.com/post/how-to-upload-files-in-reactjs-with-example
                 Yeterince modifylarsak kullanabiliriz
               </h1> 
               <h3> 
