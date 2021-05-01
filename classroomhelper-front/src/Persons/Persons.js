@@ -32,7 +32,15 @@ export default class Persons extends React.Component {
     }
 
     render() {
-
+        var rows = [];
+        if (this.state.personalInfo !== null) {
+            for (var i = 0; i < (this.state.personalInfo.name.length); i++) {
+                rows.push(
+                    <div   >
+                        <li>{this.state.personalInfo.name[i] + " " + this.state.personalInfo.id[i]}</li>
+                    </div>)
+            }
+        }
         return (
             <div>
                 {
@@ -43,24 +51,7 @@ export default class Persons extends React.Component {
 
                             <ol>
 
-                                <li>{this.state.personalInfo.name[0] + " " + this.state.personalInfo.id[0]}</li>
-
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.personalInfo.name[1] + " " + this.state.personalInfo.id[1]}</li>
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.personalInfo.name[2] + " " + this.state.personalInfo.id[2]}</li>
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.personalInfo.name[3] + " " + this.state.personalInfo.id[3]}</li>
-
+                                {rows}
                             </ol>
                         </div>
 
