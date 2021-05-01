@@ -1,0 +1,13 @@
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+  }
+  
+  .button {
+      background-color: #962196;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      padding: 8px 14px;
+      text-align: center;
+      text-decoration: none;
+  }
