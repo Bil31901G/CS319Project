@@ -6,34 +6,55 @@ import "./GroupTable.css"
 
 export default class GroupTable extends React.Component {
 
+    constructor(props){
+        super(props)
+        
+        this.addGroupFrameClickHandler = this.addGroupFrameClickHandler.bind(this)
+    }
+
     state = {
         loading: true,
-        availableGroupIDs : null
+        availableGroupIDs : null,
+        needsUpdate: false
     }
     
     async componentDidMount(){
 
         //This part is commented because, fake database api request has limited usage. Change link to api revelant api endpoint.
 
-        // const url = "https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/group?id=" + this.props.id
+        // const url = "https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/availableGroups"
         // const response = await fetch(url);
         // const data = await response.json();
         // this.setState({
         //     loading: false,
         //     availableGroupIDs: data
         // })
-
+        // console.log(data)
         this.setState(
         {
             loading: false,
-            availableGroupIDs:[1,2,3,4,5,6,7,8,9,10]
+            availableGroupIDs:[1,2,3,4,5,6,7,8,9,10,11]
         })
 
     }
 
-    // addGroupFrameClickHandler(){
-    //     console.log("Im clicked!");
-    // }
+    async addGroupFrameClickHandler(){
+         
+        //  var response = fetch("https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/group", {
+        //     method: "POST",
+        //  })
+
+        // var result = (await response).ok;
+        // console.log("response", result)
+        var result = true;
+
+        if(result === true){
+            window.location.reload(); //Not the most elegant way but does the job. lmao
+        }
+        else{
+            alert("An error occured. Add group did not happen.")
+        }
+    }
 
     render(){
 
@@ -46,7 +67,7 @@ export default class GroupTable extends React.Component {
                     </div>)
             }
         }
-        rows.push(<div key={"AddGroupButton"} className="columnAddGroup" onClick={() =>{ alert("click")} } ><AddGroupFrame > </AddGroupFrame></div>)
+        rows.push(<div key={"AddGroupButton"} className="columnAddGroup" onClick={this.addGroupFrameClickHandler } ><AddGroupFrame > </AddGroupFrame></div>)
         return( 
             <div>{
                 this.state.loading ? 

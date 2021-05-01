@@ -4,10 +4,10 @@ import NavBar from "../NavBar/NavBar"
 import GroupTable from "../Groups/GroupTable"
 
 export default class AllGroups extends React.Component {
-    componentWillMount(){
+
+    componentDidMount(){
         this.props.history.push('/AllGroups');
     }
-
 
     render(){
         return(
@@ -20,7 +20,7 @@ export default class AllGroups extends React.Component {
                         All Groups
                     </h1>
 
-                    <GroupTable></GroupTable>
+                    <GroupTable ></GroupTable>
 
                 </div>
             </>   
