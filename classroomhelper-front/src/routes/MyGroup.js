@@ -23,8 +23,9 @@ export default class MyGroup extends React.Component {
             </h1>
 
             </div>
-
-            <MyGroupTable/>
+            <div className="tableStyling">
+                <MyGroupTable/>
+            </div>
             <AssignmentTable/>
             <JoinRequestTable/>
             </>

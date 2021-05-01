@@ -1,6 +1,7 @@
 .columnGroup{
     float: left;
     width: 35%;
+    height: 400px;
     padding: 5px;
     border: 1px solid black;
     background-color: lightgray;
