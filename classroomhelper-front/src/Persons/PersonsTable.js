@@ -36,7 +36,7 @@ export default class PersonsTable extends React.Component {
         if (this.state.enrolledUsersIDs !== null) {
             for (var i = 0; i < (this.state.enrolledUsersIDs.length); i++) {
                 rows.push(
-                    <div key={"col " + i} className="column"  >
+                    <div key={"col " + i} className="columnPerson"  >
                         <PersonsFrame id={this.state.enrolledUsersIDs[i]}>
                         </PersonsFrame>
                     </div>)
