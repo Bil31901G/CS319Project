@@ -12,6 +12,7 @@ import {
     Link
 } from "react-router-dom";
 import PersonsTable from '../Persons/PersonsTable';
+import NavBarInstructor from '../NavBar/NavBarInstructor';
 export default class PeopleInstructor extends React.Component {
     componentWillMount() {
         this.props.history.push('/PeopleInstructor');
@@ -22,7 +23,7 @@ export default class PeopleInstructor extends React.Component {
 
 
             <>
-                <NavBar> </NavBar>
+                <NavBarInstructor> </NavBarInstructor>
                 <div className="People">
 
                     <h1>

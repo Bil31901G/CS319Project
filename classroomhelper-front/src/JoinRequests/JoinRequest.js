@@ -4,10 +4,10 @@ export default class JoinRequest extends React.Component {
 
     state = {
         loading: true,
-        requestInfo : null
+        joinRequestInfo: null
     }
 
-    async componentDidMount(){
+    async componentDidMount() {
 
         //This part is commented because, fake database api request has limited usage. 
 
@@ -21,29 +21,36 @@ export default class JoinRequest extends React.Component {
 
         this.setState({
             loading: false,
-            joinRequestInfo: { "id": [1, 2, 3], "name": ["Name Surname (dummy data)", "Name Surname (dummy data)", "Name Surname (dummy data)"]}})
+            joinRequestInfo: { "id": [1, 2, 3], "name": ["Name Surname (dummy data)", "Name Surname (dummy data)", "Name Surname (dummy data)"] }
+        })
     }
-    
-    render(){
-       
+
+    render() {
+        var rows = [];
+        if (this.state.joinRequestInfo !== null) {
+            for (var i = 0; i < (this.state.joinRequestInfo.name.length); i++) {
+                rows.push(
+                    <div   >
+                        <li>{this.state.joinRequestInfo.name[i]}<button>Accept</button><button>Decline</button></li>
+                    </div>)
+            }
+        }
         return (
             <div>
                 {
-                    (this.state.loading || (this.state.groupInfo === null)) ? 
-                    <div>loading...</div> 
-                    :
-                    <div className="joinRequest-name-list">
-                    <h1>Join Requests {this.props.id}</h1>
-                    <ul>
-                        <li>{this.state.joinRequestInfo.name[0]}<button>Accept</button><button>Decline</button></li>
-                        <li>{this.state.joinRequestInfo.name[1]}<button>Accept</button><button>Decline</button></li>
-                        <li>{this.state.joinRequestInfo.name[2]}<button>Accept</button><button>Decline</button></li>
-                    </ul>
-                </div>
-           
-                } 
+                    (this.state.loading || (this.state.groupInfo === null)) ?
+                        <div>loading...</div>
+                        :
+                        <div className="joinRequest-name-list">
+                            <h1>Join Requests {this.props.id}</h1>
+                            <ul>
+                                {rows}
+                            </ul>
+                        </div>
+
+                }
             </div>
-                
+
         )
     }
 }

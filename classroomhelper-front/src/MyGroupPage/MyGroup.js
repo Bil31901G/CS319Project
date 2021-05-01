@@ -4,10 +4,10 @@ export default class MyGroup extends React.Component {
 
     state = {
         loading: true,
-        groupInfo : null
+        groupInfo: null
     }
 
-    async componentDidMount(){
+    async componentDidMount() {
 
         //This part is commented because, fake database api request has limited usage. 
 
@@ -21,41 +21,45 @@ export default class MyGroup extends React.Component {
 
         this.setState({
             loading: false,
-            groupInfo: { "id": 1,
-             "name": "1A",
-              "userlist": [ "dummy data",
+            groupInfo: {
+                "id": 1,
+                "name": "1A",
+                "userlist": ["dummy data",
                     "dummy data",
                     "dummy data",
                     "dummy data",
-                    "dummy data" ]}})
+                    "dummy data"]
+            }
+        })
     }
-    
-    render(){
-       
+
+    render() {
+        var rows = [];
+        if (this.state.groupInfo !== null) {
+            for (var i = 0; i < (this.state.groupInfo.userlist.length); i++) {
+                rows.push(
+                    <div   >
+                        <li>{this.state.groupInfo.userlist[i]}<button>Review</button></li>
+                        <p></p>
+                    </div>)
+            }
+        }
         return (
             <div>
                 {
-                    (this.state.loading || (this.state.groupInfo === null)) ? 
-                    <div>loading...</div> 
-                    :
-                    <div className="my-group-name-list">
-                    <h1>Group {this.props.id}</h1>
-                    <ul>
-                        <li>{this.state.groupInfo.userlist[0]}<button>Review</button></li>
-                        <p></p>
-                        <li>{this.state.groupInfo.userlist[1]}<button>Review</button></li>
-                        <p></p>
-                        <li>{this.state.groupInfo.userlist[2]}<button>Review</button></li>
-                        <p></p>
-                        <li>{this.state.groupInfo.userlist[3]}<button>Review</button></li>
-                        <p></p>
-                        <li>{this.state.groupInfo.userlist[4]}<button>Review</button></li>
-                    </ul>
-                    </div>
-           
-                } 
+                    (this.state.loading || (this.state.groupInfo === null)) ?
+                        <div>loading...</div>
+                        :
+                        <div className="my-group-name-list">
+                            <h1>Group {this.props.id}</h1>
+                            <ul>
+                                {rows}
+                            </ul>
+                        </div>
+
+                }
             </div>
-                
+
         )
     }
 }

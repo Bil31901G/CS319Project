@@ -32,7 +32,16 @@ export default class Assignment extends React.Component {
     }
 
     render() {
-
+        var rows = [];
+        if (this.state.assignmentInfo !== null) {
+            for (var i = 0; i < (this.state.assignmentInfo.name.length); i++) {
+                rows.push(
+                    <div   >
+                        <li>{this.state.assignmentInfo.name[i]}</li>
+                        <la>Due Date: {this.state.assignmentInfo.dueDate[i]}</la><la><FileDialogue></FileDialogue></la>
+                    </div>)
+            }
+        }
         return (
             <div>
                 {
@@ -43,26 +52,7 @@ export default class Assignment extends React.Component {
 
                             <ul>
 
-                                <li>{this.state.assignmentInfo.name[0]}</li>
-                                <la>Due Date: {this.state.assignmentInfo.dueDate[0]}</la><la><FileDialogue></FileDialogue></la>
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.assignmentInfo.name[1]}</li>
-                                <la>Due Date: {this.state.assignmentInfo.dueDate[1]}</la><la><FileDialogue></FileDialogue></la>
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.assignmentInfo.name[2]}</li>
-                                <la>Due Date: {this.state.assignmentInfo.dueDate[2]}</la><la><FileDialogue></FileDialogue></la>
-
-                                <p>
-                                </p>
-
-                                <li>{this.state.assignmentInfo.name[3]}</li>
-                                <la>Due Date: {this.state.assignmentInfo.dueDate[3]}</la><la><FileDialogue></FileDialogue></la>
+                                {rows}
 
                             </ul>
                         </div>
