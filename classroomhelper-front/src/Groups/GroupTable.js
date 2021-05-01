@@ -15,10 +15,11 @@ export default class GroupTable extends React.Component {
     state = {
         loading: true,
         availableGroupIDs : null,
-        needsUpdate: false
     }
     
     async componentDidMount(){
+
+        //Fetch which groups are available to display.
 
         //This part is commented because, fake database api request has limited usage. Change link to api revelant api endpoint.
         //***************mock key expired. replace************** */

@@ -1,6 +1,7 @@
 import React from 'react';
 import "./MyGroup.css"
 import NavBar from "../NavBar/NavBar"
+import UploadAssignment from '../UploadAssignment/UploadAssignment';
 
 export default class MyGroup extends React.Component {
     componentWillMount(){
@@ -19,7 +20,7 @@ export default class MyGroup extends React.Component {
             </h1>
 
             </div>
-
+            <UploadAssignment/>
             </>
         )
     }
