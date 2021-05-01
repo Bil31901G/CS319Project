@@ -1,13 +1,16 @@
 import React from 'react';
 import "./MyGroup.css"
 import NavBar from "../NavBar/NavBar"
-import UploadAssignment from '../UploadAssignment/UploadAssignment';
+import AssignmentTable from "../MyGroupPage/AssignmentTable"
+import MyGroupTable from '../MyGroupPage/MyGroupTable';
+import JoinRequestTable from "../MyGroupPage/JoinRequestTable"
 
 export default class MyGroup extends React.Component {
-    componentWillMount(){
+    componentDidMount(){
         this.props.history.push('/MyGroup');
     }
 
+    
     render(){
         return(
             <>
@@ -20,7 +23,10 @@ export default class MyGroup extends React.Component {
             </h1>
 
             </div>
-            <UploadAssignment/>
+
+            <MyGroupTable/>
+            <AssignmentTable/>
+            <JoinRequestTable/>
             </>
         )
     }

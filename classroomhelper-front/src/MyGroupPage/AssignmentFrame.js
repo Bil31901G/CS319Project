@@ -1,6 +1,6 @@
 import React from 'react'
 import Assignment from './Assignment'
-
+import UploadAssignment from "../MyGroupPage/UploadAssignment"
 export default class AssignmentFrame extends React.Component {
 
     constructor(){
@@ -18,5 +18,6 @@ export default class AssignmentFrame extends React.Component {
                     <Assignment id = {this.props.id} ></Assignment>
                 </>
       )
-    }
+    }  
+    
 }

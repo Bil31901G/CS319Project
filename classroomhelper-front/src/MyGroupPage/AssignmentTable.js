@@ -2,7 +2,6 @@ import React from 'react'
 import AssignmentFrame from './AssignmentFrame'
 import "./AssignmentTable.css"
 
-
 export default class AssignmentTable extends React.Component {
 
     state = {

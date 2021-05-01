@@ -1,4 +1,5 @@
 import React from 'react'
+import UploadAssignment from './UploadAssignment'
 
 export default class Assignment extends React.Component {
 
@@ -22,7 +23,17 @@ export default class Assignment extends React.Component {
         this.setState({
             loading: false,
             //dummy datas for assignment list (in course)
-            assignmentInfo: { "id": [1, 2, 3, 4], "name": ["Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)"], "dueDate": ["03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)"]
+            assignmentInfo: { 
+                "id": [1, 2, 3, 4], 
+                "name": 
+                ["Analysis Report (dummy data)",
+                 "Analysis Report (dummy data)",
+                  "Analysis Report (dummy data)",
+                   "Analysis Report (dummy data)"],
+                    "dueDate": ["03.05.2021 (dummy data)",
+                     "03.05.2021 (dummy data)",
+                      "03.05.2021 (dummy data)",
+                       "03.05.2021 (dummy data)"]
 
         }})
                 
@@ -41,25 +52,25 @@ export default class Assignment extends React.Component {
                     <ul>
        
                         <li>{this.state.assignmentInfo.name[0]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[0]}</la><la><button>Upload</button></la>
+                        <la>Due Date: {this.state.assignmentInfo.dueDate[0]}</la><la><UploadAssignment/></la>
                     
                         <p>
                         </p>
 
                         <li>{this.state.assignmentInfo.name[1]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[1]}</la><la><button>Upload</button></la>
+                        <la>Due Date: {this.state.assignmentInfo.dueDate[1]}</la><la><UploadAssignment/></la>
 
                         <p>
                         </p>
                         
                         <li>{this.state.assignmentInfo.name[2]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[2]}</la><la><button>Upload</button></la>
+                        <la>Due Date: {this.state.assignmentInfo.dueDate[2]}</la><la><UploadAssignment/></la>
 
                         <p>
                         </p>
                         
                         <li>{this.state.assignmentInfo.name[3]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[3]}</la><la><button>Upload</button></la>
+                        <la>Due Date: {this.state.assignmentInfo.dueDate[3]}</la><la><UploadAssignment/></la>
 
                     </ul>
                 </div>
