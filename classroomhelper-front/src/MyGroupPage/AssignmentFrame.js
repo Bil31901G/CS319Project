@@ -1,6 +1,5 @@
 import React from 'react'
 import Assignment from './Assignment'
-import UploadAssignment from "../MyGroupPage/UploadAssignment"
 export default class AssignmentFrame extends React.Component {
 
     constructor(){

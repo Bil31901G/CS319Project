@@ -1,6 +1,7 @@
 import React from 'react';
 import "./People.css"
 import NavBar from "../NavBar/NavBar"
+import ReviewTable from '../ArtifactReview/ReviewTable';
 
 export default class People extends React.Component {
     componentWillMount(){
@@ -18,7 +19,7 @@ export default class People extends React.Component {
             <h1>
                 People
             </h1>
-
+                <ReviewTable/>
             </div>
             </>
         )
