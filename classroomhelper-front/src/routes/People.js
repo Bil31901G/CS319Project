@@ -9,30 +9,25 @@ import {
     Switch,
     Route,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
 export default class People extends React.Component {
-    componentWillMount(){
+    componentWillMount() {
         this.props.history.push('/People');
     }
 
-    render(){
-        return(
+    render() {
+        return (
 
 
             <>
-            <NavBar> </NavBar>
-            <div className="People">
-            
-            <h1>
-                People
+                <NavBar> </NavBar>
+                <div className="People">
+
+                    <h1>
+                        People
             </h1>
 
-            <Link to="/Course"><button>Course</button></Link>            
-            <Link to="/MyGroup"><button>My Group</button></Link>
-            <Link to="/AllGroups"><button>All Groups</button></Link>
-            <Link to="/People"><button>People</button></Link>   
-
-            </div>
+                </div>
             </>
         )
     }
