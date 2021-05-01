@@ -9,25 +9,26 @@ import {
     Switch,
     Route,
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
+import PersonsTable from "../Persons/PersonsTable"
 export default class People extends React.Component {
-    componentWillMount(){
+    componentWillMount() {
         this.props.history.push('/People');
     }
 
-    render(){
-        return(
+    render() {
+        return (
 
 
             <>
-            <NavBar> </NavBar>
-            <div className="People">
-            
-            <h1>
-                People
-            </h1>
+                <NavBar> </NavBar>
+                <div className="People">
 
-            </div>
+                    <h1>
+                        People
+            </h1>
+                    <PersonsTable></PersonsTable>
+                </div>
             </>
         )
     }
