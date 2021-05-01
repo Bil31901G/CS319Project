@@ -26,11 +26,6 @@ export default class Course extends React.Component {
                 Course
             </h1>
 
-            <Link to="/Course"><button>Course</button></Link>            
-            <Link to="/MyGroup"><button>My Group</button></Link>
-            <Link to="/AllGroups"><button>All Groups</button></Link>
-            <Link to="/People"><button>People</button></Link>   
-
             </div>
             </>
         )
