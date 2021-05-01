@@ -1,13 +1,14 @@
 import React from 'react'
+import FileDialogue from '../FileSelect/FileSelect'
 
 export default class Assignment extends React.Component {
 
     state = {
         loading: true,
-        assignmentInfo : null
+        assignmentInfo: null
     }
 
-    async componentDidMount(){
+    async componentDidMount() {
 
         //This part is commented because, fake database api request has limited usage. 
 
@@ -22,51 +23,53 @@ export default class Assignment extends React.Component {
         this.setState({
             loading: false,
             //dummy datas for assignment list (in course)
-            assignmentInfo: { "id": [1, 2, 3, 4], "name": ["Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)"], "dueDate": ["03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)"]
+            assignmentInfo: {
+                "id": [1, 2, 3, 4], "name": ["Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)", "Analysis Report (dummy data)"], "dueDate": ["03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)", "03.05.2021 (dummy data)"]
 
-        }})
-                
+            }
+        })
+
     }
-    
-    render(){
-       
+
+    render() {
+
         return (
             <div>
                 {
-                    (this.state.loading || (this.state.assignmentInfo === null)) ? 
-                    <div>loading...</div> 
-                    :
-                    <div className="assignment-name-list">
-                   
-                    <ul>
-       
-                        <li>{this.state.assignmentInfo.name[0]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[0]}</la><la><button>Upload</button></la>
-                    
-                        <p>
-                        </p>
+                    (this.state.loading || (this.state.assignmentInfo === null)) ?
+                        <div>loading...</div>
+                        :
+                        <div className="assignment-name-list">
 
-                        <li>{this.state.assignmentInfo.name[1]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[1]}</la><la><button>Upload</button></la>
+                            <ul>
 
-                        <p>
-                        </p>
-                        
-                        <li>{this.state.assignmentInfo.name[2]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[2]}</la><la><button>Upload</button></la>
+                                <li>{this.state.assignmentInfo.name[0]}</li>
+                                <la>Due Date: {this.state.assignmentInfo.dueDate[0]}</la><la><FileDialogue></FileDialogue></la>
 
-                        <p>
-                        </p>
-                        
-                        <li>{this.state.assignmentInfo.name[3]}</li>
-                        <la>Due Date: {this.state.assignmentInfo.dueDate[3]}</la><la><button>Upload</button></la>
+                                <p>
+                                </p>
 
-                    </ul>
-                </div>
-           
-                } 
+                                <li>{this.state.assignmentInfo.name[1]}</li>
+                                <la>Due Date: {this.state.assignmentInfo.dueDate[1]}</la><la><FileDialogue></FileDialogue></la>
+
+                                <p>
+                                </p>
+
+                                <li>{this.state.assignmentInfo.name[2]}</li>
+                                <la>Due Date: {this.state.assignmentInfo.dueDate[2]}</la><la><FileDialogue></FileDialogue></la>
+
+                                <p>
+                                </p>
+
+                                <li>{this.state.assignmentInfo.name[3]}</li>
+                                <la>Due Date: {this.state.assignmentInfo.dueDate[3]}</la><la><FileDialogue></FileDialogue></la>
+
+                            </ul>
+                        </div>
+
+                }
             </div>
-                
+
         )
     }
 }
