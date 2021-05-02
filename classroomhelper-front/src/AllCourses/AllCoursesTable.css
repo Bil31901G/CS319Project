@@ -1,0 +1,14 @@
+.column {
+    float: left;
+    width: 24%;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }

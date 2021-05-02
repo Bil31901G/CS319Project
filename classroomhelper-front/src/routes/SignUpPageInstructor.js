@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import "./Home.css"
-import CourseInstructor from './CourseInstructor';
+import CourseRegInstructor from './CourseRegInstructor';
 
 
 import {
@@ -46,7 +46,7 @@ export default class SignUpPageInstructor extends React.Component {
                     </label>
                 </form>
 
-                <Link to="/CourseInstructor">  <button>Sign-up</button>   </Link>
+                <Link to="/CourseRegInstructor">  <button>Sign-up</button>   </Link>
 
             </div>
         )
