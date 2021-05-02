@@ -40,8 +40,7 @@ export default class Home extends React.Component {
               </form>
     
               <Link to="/Course">  <button>Login</button>   </Link>  
-    
-              <button>Sign-up</button>
+              <Link to="/SignUpPageStudent">  <button>Sign-up</button>   </Link>
            
           </div>
           )
