@@ -1,2 +1,0 @@
-2 May 2021 19:08:02 GMT: Log 'EclipseCompiler.txt' opened: 2 May 2021 19:08:02 GMT with name C:\Users\hp\Desktop\group controller modified\EclipseCompiler.txt
-2 May 2021 19:08:17 GMT: Log 'EclipseCompiler.txt' opened: 2 May 2021 19:08:17 GMT with name C:\Users\hp\Desktop\group controller modified\EclipseCompiler.txt
