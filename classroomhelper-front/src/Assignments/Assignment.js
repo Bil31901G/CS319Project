@@ -17,7 +17,7 @@ export default class Assignment extends React.Component {
         // const data = await response.json();
         // this.setState({
         //     loading: false,
-        //     groupInfo: data
+        //     assignmentInfo: data
         // })
 
         this.setState({

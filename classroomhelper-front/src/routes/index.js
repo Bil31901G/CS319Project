@@ -15,6 +15,7 @@ import SignUpPageStudent from './SignUpPageStudent';
 import CourseInstructor from './CourseInstructor';
 import Assignment from './Assignment';
 import PeopleInstructor from './PeopleInstructor';
+import UploadAssignment from './UploadAssignment';
 export default () =>
     <BrowserRouter>
         <Switch>
@@ -32,5 +33,6 @@ export default () =>
             <Route path="/CourseInstructor" component={CourseInstructor} />
             <Route path="/Assignment" component={Assignment} />
             <Route path="/PeopleInstructor" component={PeopleInstructor} />
+            <Route path="/UploadAssignment" component={UploadAssignment} />
         </Switch>
     </BrowserRouter>;
