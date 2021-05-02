@@ -1,12 +1,12 @@
 import React from 'react'
-import MyGroupFrame from './MyGroupFrame'
-import "./MyGroupTable.css"
+import JoinRequestFrame from './JoinRequestFrame'
+import "./JoinRequestTable.css"
 
-export default class MyGroupTable extends React.Component {
+
+export default class JoinRequestTable extends React.Component {
 
     state = {
         loading: true,
-        groupId: null
     }
     
     async componentDidMount(){
@@ -24,7 +24,6 @@ export default class MyGroupTable extends React.Component {
         this.setState(
         {
             loading: false,
-            groupID: 1 //1 is a dummy data
         })
 
     }
@@ -32,13 +31,14 @@ export default class MyGroupTable extends React.Component {
     render(){
 
         var rows = [];
-        if (this.state.availableGroupIDs !== null) {
-             rows.push(
-                <div key={"col " + 1} className="columnGroup"  >
-                    <MyGroupFrame id={this.state.groupID}>
-                     </MyGroupFrame>
-                </div>)
+        if (this.state.assignmentID !== null) {
+                rows.push(
+                    <div key={"col " + 1} className="columnJoinRequest"  >
+                        <JoinRequestFrame id={this.state.assignmentID}>
+                        </JoinRequestFrame>
+                    </div>)
         }
+        
         return( 
             <div>{
                 this.state.loading ? 

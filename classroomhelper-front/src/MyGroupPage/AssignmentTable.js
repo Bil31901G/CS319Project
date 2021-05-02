@@ -1,12 +1,12 @@
 import React from 'react'
-import MyGroupFrame from './MyGroupFrame'
-import "./MyGroupTable.css"
+import AssignmentFrame from './AssignmentFrame'
+import "./AssignmentTable.css"
 
-export default class MyGroupTable extends React.Component {
+export default class AssignmentTable extends React.Component {
 
     state = {
         loading: true,
-        groupId: null
+        availableAssignmentIDs : null
     }
     
     async componentDidMount(){
@@ -24,7 +24,7 @@ export default class MyGroupTable extends React.Component {
         this.setState(
         {
             loading: false,
-            groupID: 1 //1 is a dummy data
+
         })
 
     }
@@ -32,13 +32,14 @@ export default class MyGroupTable extends React.Component {
     render(){
 
         var rows = [];
-        if (this.state.availableGroupIDs !== null) {
-             rows.push(
-                <div key={"col " + 1} className="columnGroup"  >
-                    <MyGroupFrame id={this.state.groupID}>
-                     </MyGroupFrame>
+                rows.push(
+                    <div key={"col "} className="columnAssignment">
+                    <AssignmentFrame> </AssignmentFrame>
                 </div>)
-        }
+            
+        
+
+
         return( 
             <div>{
                 this.state.loading ? 

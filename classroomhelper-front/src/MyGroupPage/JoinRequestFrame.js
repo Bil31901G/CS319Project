@@ -1,7 +1,7 @@
 import React from 'react'
-import MyGroup from './MyGroup'
+import JoinRequest from './JoinRequest'
 
-export default class MyGroupFrame extends React.Component {
+export default class JoinRequestFrame extends React.Component {
 
     constructor(){
         super()
@@ -13,7 +13,7 @@ export default class MyGroupFrame extends React.Component {
     render(){
         return (
             <>
-                <MyGroup id = {this.props.id} ></MyGroup>
+                <JoinRequest id = {this.props.id} ></JoinRequest>
             </>
         )
     }
