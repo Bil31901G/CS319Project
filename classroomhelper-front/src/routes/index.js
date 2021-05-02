@@ -10,6 +10,8 @@ import People from './People';
 import AllGroupsInstructor from './AllGroupsInstructor';
 import InstructorSignUp from './InstructorSignUp';
 import FirstPage from './FirstPage';
+import SignUpPageInstructor from './SignUpPageInstructor';
+import SignUpPageStudent from './SignUpPageStudent';
 import CourseInstructor from './CourseInstructor';
 import Assignment from './Assignment';
 import PeopleInstructor from './PeopleInstructor';
@@ -24,6 +26,8 @@ export default () =>
             <Route path="/People" component={People} />
             <Route path="/AllGroupsInstructor" component={AllGroupsInstructor} />
             <Route path="/FirstPage" component={FirstPage} />
+            <Route path="/SignUpPageInstructor" component={SignUpPageInstructor} />
+            <Route path="/SignUpPageStudent" component={SignUpPageStudent} />
             <Route path="/InstructorSignUp" component={InstructorSignUp} />
             <Route path="/CourseInstructor" component={CourseInstructor} />
             <Route path="/Assignment" component={Assignment} />

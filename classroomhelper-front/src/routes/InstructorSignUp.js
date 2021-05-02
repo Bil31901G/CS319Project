@@ -40,8 +40,7 @@ export default class InstructorSignUp extends React.Component {
                 </form>
 
                 <Link to="/CourseInstructor">  <button>Login</button>   </Link>
-
-                <button>Sign-up</button>
+                <Link to="/SignUpPageInstructor">  <button>Sign-up</button>   </Link>
 
             </div>
         )
