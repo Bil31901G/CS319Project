@@ -2,8 +2,9 @@ import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import "./Course.css"
 import Home from './Home';
-
+import AssignmentTableInstructor from "../Assignments/AssignmentTableInstructor"
 import NavBarInstructor from "../NavBar/NavBarInstructor"
+import UploadAssignment from "./UploadAssignment";
 import {
     BrowserRouter as Router,
     Switch,
@@ -25,9 +26,9 @@ export default class Assignment extends React.Component {
                     <h1>
                         Assignment
             </h1>
+                    <Link to="/UploadAssignment">  <button>Upload Assignment</button>   </Link>
 
-
-
+                    <AssignmentTableInstructor></AssignmentTableInstructor>
                 </div>
 
 
