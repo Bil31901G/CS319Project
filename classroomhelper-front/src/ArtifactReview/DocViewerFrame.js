@@ -106,11 +106,11 @@ export default class DocViewerFrame extends React.Component {
         <>
         <div>
           <embed src={this.state.data} align="left" width="800px" height="1000px" />
+          </div>
+        <div>
           <CommentSection graCrit={this.state.data.gradeingCriteria} comments={this.state.data.comments}></CommentSection>
           <EvalForm graCrit={this.state.data.gradeingCriteria}></EvalForm>
-        </div>
-        <div>
-          
+
         </div>
         </>
       )
