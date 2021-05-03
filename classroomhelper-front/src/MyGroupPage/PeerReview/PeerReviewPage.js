@@ -13,6 +13,25 @@ export default class PeerReviewPage extends React.Component {
 
     submitHandle(){
         alert("submit clicked")
+        
+        var namesj =[]
+        var pointsj = []
+        var commentsj = []
+
+        for (let i = 0; i < this.state.groupInfo.userlist.length; i++) {
+            namesj.push(this.state.userlist.userlist[i])
+            pointsj.push(document.getElementsByClassName("point_field")[i])
+            commentsj.push(document.getElementsByClassName("comment_field")[i])
+        }
+
+        var data ={
+            names : namesj,
+            points: pointsj,
+            comments: commentsj
+        }
+        var json = JSON.parse(data);
+
+        console.log(json)
     }
 
     async componentDidMount(){
@@ -49,8 +68,8 @@ export default class PeerReviewPage extends React.Component {
                 rows.push(
                     <div>
                         <li>{this.state.groupInfo.userlist[i]} 
-                        <input type="text" defaultValue="Point / 10"/> 
-                        <input type="text" defaultValue="Additional Comments"/> </li> 
+                        <input className="point_field" type="text" defaultValue="Point / 10"/> 
+                        <input className="comment_field" type="text" defaultValue="Additional Comments"/> </li> 
                     </div>)
             }
         }
