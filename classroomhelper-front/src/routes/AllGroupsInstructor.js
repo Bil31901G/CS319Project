@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import "./AllGroups.css"
 import NavBarInstructor from "../NavBar/NavBarInstructor"
-import GroupTable from "../Groups/GroupTable"
+import GroupTableInstructor from "../Groups/GroupTableInstructor"
 import {
     BrowserRouter as Router,
     Switch,
@@ -29,7 +29,7 @@ export default class AllGroupsInstructor extends React.Component {
                         All Groups
                     </h1>
 
-                    <GroupTable></GroupTable>
+                    <GroupTableInstructor></GroupTableInstructor>
 
                 </div>
             </>
