@@ -1,10 +1,10 @@
 import React from 'react'
 import AddGroupFrame from './AddGroupFrame'
-import GroupFrame from './GroupFrame'
+import GroupFrameInstructor from './GroupFrameInstructor'
 import "./GroupTable.css"
 
 
-export default class GroupTable extends React.Component {
+export default class GroupTableInstructor extends React.Component {
 
     constructor(props) {
         super(props)
@@ -64,7 +64,7 @@ export default class GroupTable extends React.Component {
             for (var i = 0; i < (this.state.availableGroupIDs.length); i++) {
                 rows.push(
                     <div key={"col " + i} className="column"  >
-                        <GroupFrame id={this.state.availableGroupIDs[i]}> </GroupFrame>
+                        <GroupFrameInstructor id={this.state.availableGroupIDs[i]}> </GroupFrameInstructor>
                     </div>)
             }
         }
