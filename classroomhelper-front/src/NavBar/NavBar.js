@@ -19,10 +19,10 @@ export default class NavBar extends React.Component {
             <>
                 <Menu styles={navStyle} >
                     
-                    <Link to="/Course">  <a id="Course" className="menu-item"   >Course</a> </Link>
-                    <Link to="/MyGroup">  <a id="MyGroup" className="menu-item"  >MyGroup</a> </Link>
-                    <Link to="/AllGroups">  <a id="AllGroups" className="menu-item">AllGroups</a> </Link>
-                    <Link to="/People">  <a id="People" className="menu-item"   >People</a> </Link>
+                    <Link to="/Course">  <p id="Course" className="menu-item"   >Course</p> </Link>
+                    <Link to="/MyGroup">  <p id="MyGroup" className="menu-item"  >MyGroup</p> </Link>
+                    <Link to="/AllGroups">  <p id="AllGroups" className="menu-item">AllGroups</p> </Link>
+                    <Link to="/People">  <p id="People" className="menu-item"   >People</p> </Link>
                     
 
 

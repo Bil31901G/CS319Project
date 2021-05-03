@@ -7,9 +7,6 @@ import CommentSection from './CommentSection';
 import EvalForm from "./EvalForm"
 export default class DocViewerFrame extends React.Component {
 
-  constructor() {
-    super();
-  }
 
   state ={
     loading: true,

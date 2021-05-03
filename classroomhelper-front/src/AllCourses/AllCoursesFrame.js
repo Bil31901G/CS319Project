@@ -1,13 +1,9 @@
-import React from 'react'
-
-import Courses from "./Courses"
-import CourseInstructor from "../routes/CourseInstructor"
+import React from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
+import Courses from "./Courses";
+
 
 export default class AllCoursesFrame extends React.Component {
 

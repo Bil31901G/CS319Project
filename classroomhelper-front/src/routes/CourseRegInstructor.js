@@ -1,14 +1,6 @@
-import { render } from '@testing-library/react';
-import React, { Component } from 'react';
+import React from 'react';
 import "./AllGroups.css"
 import AllCoursesTable from "../AllCourses/AllCoursesTable"
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 
 export default class CourseRegInstructor extends React.Component {
     componentWillMount() {
