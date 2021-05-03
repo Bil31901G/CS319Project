@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import Courses from "./Courses";
 
-
+//Show courses for instructors. Component holder.
 export default class AllCoursesFrame extends React.Component {
 
     constructor() {
