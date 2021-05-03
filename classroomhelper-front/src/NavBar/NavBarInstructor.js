@@ -18,7 +18,7 @@ export default class NavBarInstructor extends React.Component {
                     <a id="Assignment" className="menu-item" href="/Assignment">Assignment</a>
                     <a id="AllGroupsInstructor" className="menu-item" href="/AllGroupsInstructor">AllGroups</a>
                     <a id="PeopleInstructor" className="menu-item" href="/PeopleInstructor">People</a>
-                    <a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
+
                 </Menu>
             </>
         )

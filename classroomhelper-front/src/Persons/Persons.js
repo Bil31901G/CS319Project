@@ -12,7 +12,7 @@ export default class Persons extends React.Component {
 
         //This part is commented because, fake database api request has limited usage. 
 
-        // const url = "https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/group?id=" + this.props.id
+        // const url = "/people/{id}" + this.props.id
         // const response = await fetch(url);
         // const data = await response.json();
         // this.setState({
