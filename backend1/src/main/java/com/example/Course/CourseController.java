@@ -25,11 +25,13 @@ public class CourseController {
 	CourseController(CourseRepository courseRepository){
 		this.courseRepository = courseRepository;
 	}
-	@GetMapping("/{id}/courses")
+	/*
+	@GetMapping("/group?id={id}")
 	public List<Course> getCourses(@PathVariable People id){
 		return courseRepository.findByPeopleOrderByName(id);
 	}
-	@GetMapping("/course/{id}")
+	*/
+	@GetMapping("/group?id={id}")
 	public Course getCourse(@PathVariable Long id) {
 		return courseRepository.findById(id)
 				.orElseThrow(() -> new CourseNotFoundException(id));
@@ -38,7 +40,7 @@ public class CourseController {
 	public void createCourse(@RequestBody Course course) {
 		courseRepository.save(course);
 	}
-	@DeleteMapping("/deleteCourse/{id}")
+	@DeleteMapping("/group?id={id}")
 	public void deleteCourse(@PathVariable Long id) {
 		courseRepository.deleteById(id);
 	}

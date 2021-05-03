@@ -58,7 +58,7 @@ class GroupController {
                 .orElseThrow(() -> new GroupNotFoundException(id));
     }
 
-    @PutMapping("/allGroups/{id}")
+    @PutMapping("addGroup/{id}")
     Group replaceGroup(@RequestBody Group newGroup, @PathVariable Long id) {
 
         return repository.findById(id)
