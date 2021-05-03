@@ -2,7 +2,7 @@ import React from 'react';
 import "./Course.css"
 import NavBar from "../NavBar/NavBar"
 export default class Course extends React.Component {
-    componentWillMount(){
+    componentDidMount(){
         this.props.history.push('/Course');
     }
 

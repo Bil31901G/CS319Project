@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom";
 export default class MyGroup extends React.Component {
 
     state = {
@@ -39,8 +39,10 @@ export default class MyGroup extends React.Component {
             for (var i = 0; i < (this.state.groupInfo.userlist.length); i++) {
                 rows.push(
                     <div   >
-                        <li>{this.state.groupInfo.userlist[i]}<button>Review</button></li>
+                        <li>{this.state.groupInfo.userlist[i]} </li>
+                        
                         <p></p>
+
                     </div>)
             }
         }
@@ -55,6 +57,7 @@ export default class MyGroup extends React.Component {
                             <ul>
                                 {rows}
                             </ul>
+                            <Link to="/ReviewPage">  <button >Evaluate Peers</button> </Link>
                         </div>
 
                 }

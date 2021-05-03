@@ -17,6 +17,7 @@ import Assignment from './Assignment';
 import PeopleInstructor from './PeopleInstructor';
 import UploadAssignment from './UploadAssignment';
 import CourseRegInstructor from './CourseRegInstructor';
+import ReviewPage from "../MyGroupPage/PeerReview/PeerReviewPage"
 export default () =>
     <BrowserRouter>
         <Switch>
@@ -36,5 +37,6 @@ export default () =>
             <Route path="/PeopleInstructor" component={PeopleInstructor} />
             <Route path="/UploadAssignment" component={UploadAssignment} />
             <Route path="/CourseRegInstructor" component={CourseRegInstructor} />
+            <Route path="/ReviewPage" component={ReviewPage} />
         </Switch>
     </BrowserRouter>;
