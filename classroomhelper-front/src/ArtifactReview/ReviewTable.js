@@ -3,8 +3,32 @@ import React from 'react'
 import DocViewerFrame from "./DocViewerFrame"
 export default class ReviewTable extends React.Component {
 
+    async componentDidMount(){
+        //I could not test this part. Technically it successfully fetchs a pdf. Might need some server spesific settings.
+        // var response = await fetch("https://681c5d6a-be24-42b8-b9e7-885328e48bf3.mock.pstmn.io/getPDF?id=1",{
+        //   headers:{
+        //     "Content-Type": "application/pdf"
+        //   }
+        //   })
+    
+        //   const newData = await response.blob()
+        //   console.log("new data", newData)
+        //   console.log("blob", (new Response(newData).text()))
+        //   this.setState({
+        //     loading: false,
+        //     data: newData
+        //   })
+    
+          //Dummy Data
+    
+        //Fetch change grading criteria here
+    
+          
+      }
+
     constructor(){
         super()
+        //Bind Dummy Data functions
         this.onClickChangeAR1 = this.onClickChangeAR1.bind(this)
         this.onClickChangeDR1 = this.onClickChangeDR1.bind(this)
         this.onClickChangeF = this.onClickChangeF.bind(this)
@@ -14,7 +38,7 @@ export default class ReviewTable extends React.Component {
     state = {
         docID : 1
     }
-
+    //Dummy Data
     onClickChangeAR1(){
         console.log(1)
         this.setState({
