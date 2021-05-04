@@ -12,6 +12,7 @@ export default class SignUpPageStudent extends React.Component {
     render() {
         return (
             <div className="Home">
+                <button2>
                 <header>
                     <p>
                         Sign-up
@@ -39,7 +40,7 @@ export default class SignUpPageStudent extends React.Component {
                 </form>
 
                 <Link to="/Home">  <button>Sign-up</button>   </Link>
-
+                </button2>
             </div>
         )
             ;

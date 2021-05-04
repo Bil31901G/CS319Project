@@ -43,9 +43,11 @@ export class EvalForm extends React.Component {
           }
         return (
             <div className="evalForm">
+                <button2>
                 This is eval form
                 <form>{rows}</form>
                 <button onClick={this.submitHandler}>Submit</button>
+                </button2>
             </div>
         )
     }

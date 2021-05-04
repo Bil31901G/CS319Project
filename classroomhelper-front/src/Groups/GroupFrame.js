@@ -30,9 +30,11 @@ export default class GroupFrame extends React.Component {
     render(){
         return (
             <>
+                <button6>
                 <Group id = {this.props.id} ></Group>
                 <button onClick={this.handleJoinRequestClick}>Join Request</button>
                 <button type="button" disabled>Review </button>
+                </button6>
             </>
         )
     }

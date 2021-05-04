@@ -33,7 +33,6 @@ export default class JoinRequest extends React.Component {
                     <div>loading...</div> 
                     :
                     <div className="joinRequest-name-list">
-                    <h1>Join Requests {this.props.id}</h1>
                     <ul>
                         <li>{this.state.joinRequestInfo.name[0]}<button>Accept</button><button>Decline</button></li>
                         <li>{this.state.joinRequestInfo.name[1]}<button>Accept</button><button>Decline</button></li>

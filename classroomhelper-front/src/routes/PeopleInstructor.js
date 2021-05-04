@@ -17,7 +17,7 @@ export default class PeopleInstructor extends React.Component {
 
                     <h1>
                         People
-            </h1>
+                </h1>
 
                     <PersonsTable></PersonsTable>
                 </div>

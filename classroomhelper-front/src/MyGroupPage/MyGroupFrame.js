@@ -13,7 +13,9 @@ export default class MyGroupFrame extends React.Component {
     render(){
         return (
             <>
+                <button3>
                 <MyGroup id = {this.props.id} ></MyGroup>
+                </button3>
             </>
         )
     }
