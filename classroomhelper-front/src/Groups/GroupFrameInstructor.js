@@ -8,7 +8,7 @@ export default class GroupFrameInstructor extends React.Component {
         this.state = {
             groupObj: null
         }
-        this.handleJoinRequestClick = this.handleJoinRequestClick.bind(this)
+        this.handleReviewButton = this.handleReviewButton.bind(this)
     }
 
     async handleJoinRequestClick() {
@@ -26,13 +26,16 @@ export default class GroupFrameInstructor extends React.Component {
         console.log("response", result)
 
     }
+    handleReviewButton() {
 
+        this.props.handleReview(this.props.id);
+    }
     render() {
         return (
-            <div className="field6">  
+            <div className="field6">
                 <Group id={this.props.id} ></Group>
 
-                <button>Review </button>
+                <button type="button" onClick={this.handleReviewButton}>Review </button>
             </div>
         )
     }
