@@ -5,7 +5,7 @@ export default class AddGroupFrame extends React.Component {
     
     render(){
         return (
-            <div>
+            <div >
                 <h2> Add New Group </h2>
                 <div>
                     <img src={img} alt="add group button" width="125px" height="auto">
