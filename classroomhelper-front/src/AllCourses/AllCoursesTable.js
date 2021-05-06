@@ -38,7 +38,7 @@ export default class AllCoursesTable extends React.Component {
             for (var i = 0; i < (this.state.CourseIDs.length); i++) {
                 rows.push(
                     <div key={"col " + i} className="column"  >
-                        <AllCoursesFrame id={this.state.CourseIDs[i]}>
+                        <AllCoursesFrame id={this.state.CourseIDs[i]} >
                         </AllCoursesFrame>
                     </div>)
             }

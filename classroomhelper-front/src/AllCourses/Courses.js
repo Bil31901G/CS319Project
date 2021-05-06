@@ -22,11 +22,9 @@ export default class Courses extends React.Component {
         this.setState({
             loading: false,
             courseInfo: {
-                "courseName": ["CS319", "CS319"],
-                "section": [1, 2],
-                "Instructor": ["asd",
-                    "asqw"
-                ]
+                "courseName": ["CS319"],
+                "section": [1],
+                "Instructor": ["asd"]
             }
         })
     }
@@ -38,7 +36,7 @@ export default class Courses extends React.Component {
                 rows.push(
                     <div   >
                         <li>Course code:  {this.state.courseInfo.courseName[i]}</li>
-                        <li>Section:  {this.state.courseInfo.section[i]}</li>
+                        <li>Section:  {this.props.id}</li>
                         <li>Instructor:  {this.state.courseInfo.Instructor[i]}</li>
                     </div>)
             }
