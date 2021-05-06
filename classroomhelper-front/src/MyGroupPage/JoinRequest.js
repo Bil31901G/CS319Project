@@ -21,7 +21,7 @@ export default class JoinRequest extends React.Component {
 
         this.setState({
             loading: false,
-            joinRequestInfo: { "id": [1, 2, 3], "name": ["Name Surname (dummy data)", "Name Surname (dummy data)", "Name Surname (dummy data)"]}})
+            joinRequestInfo: { "id": [1, 2, 3], "name": ["Ezgi Saygılı", "Cem Öztürk", "Funda Tan"]}})
     }
     
     render(){

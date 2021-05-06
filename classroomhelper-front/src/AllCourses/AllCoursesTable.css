@@ -12,3 +12,18 @@
   clear: both;
   display: table;
 }
+
+.field6 {
+  margin: 0px;
+  font-size: 13px;
+  height:220px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
+  background: rgb(190, 229, 247);
+ }

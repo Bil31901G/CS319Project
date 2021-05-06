@@ -3,7 +3,7 @@ import "./People.css"
 import PersonsTable from '../Persons/PersonsTable';
 import NavBarInstructor from '../NavBar/NavBarInstructor';
 export default class PeopleInstructor extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/PeopleInstructor');
     }
 

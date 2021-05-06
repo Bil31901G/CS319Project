@@ -3,7 +3,7 @@ import "./Home.css"
 import { Link} from "react-router-dom";
 
 export default class InstructorSignUp extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/InstructorSignUp');
     }
 
@@ -11,8 +11,7 @@ export default class InstructorSignUp extends React.Component {
 
     render() {
         return (
-            <div className="Home">
-                <button2>
+            <div className="field2">
                 <header>
                     <p>
                         Classroom Helper
@@ -34,7 +33,6 @@ export default class InstructorSignUp extends React.Component {
 
                 <Link to="/CourseRegInstructor">  <button>Login</button>   </Link>
                 <Link to="/SignUpPageInstructor">  <button>Sign-up</button>   </Link>
-                </button2>
             </div>
         )
             ;

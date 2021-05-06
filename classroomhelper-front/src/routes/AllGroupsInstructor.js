@@ -4,7 +4,7 @@ import "./AllGroups.css";
 import GroupTableInstructor from "../Groups/GroupTableInstructor"
 
 export default class AllGroupsInstructor extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/AllGroupsInstructor');
     }
 
@@ -14,8 +14,6 @@ export default class AllGroupsInstructor extends React.Component {
         return (
             <>
                 <NavBarInstructor></NavBarInstructor>
-
-
 
                 <div className="AllGroups">
 

@@ -13,10 +13,10 @@ export default class JoinRequestFrame extends React.Component {
     render(){
         return (
             <>
-                <button3>
+            <div className="field3" >
                 <h2>Join Requests</h2>
                 <JoinRequest id = {this.props.id} ></JoinRequest>
-                </button3>
+            </div>
             </>
         )
     }

@@ -3,7 +3,7 @@ import "./AllGroups.css"
 import AllCoursesTable from "../AllCourses/AllCoursesTable"
 
 export default class CourseRegInstructor extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/CourseRegInstructor');
     }
 

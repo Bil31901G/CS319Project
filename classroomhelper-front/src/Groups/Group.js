@@ -24,11 +24,11 @@ export default class Group extends React.Component {
             groupInfo: {
                 "id": 1,
                 "name": "1A",
-                "userlist": ["dummy data",
-                    "dummy data",
-                    "dummy data",
-                    "dummy data",
-                    "dummy data"]
+                "userlist": ["Tuna Dalbeler",
+                    "Onur Korkmaz",
+                    "Ezgi Saygılı",
+                    "Funda Tan",
+                    "Cem Öztürk"]
             }
         })
     }

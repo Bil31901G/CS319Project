@@ -17,10 +17,10 @@ export default class AllCoursesFrame extends React.Component {
     render() {
         return (
             <>
-            <button3>
+            <div className="field6">
                 <Courses id={this.props.id} ></Courses>
                 <Link to="/CourseInstructor">  <button>View</button>   </Link>
-            </button3>
+            </div>
             </>
         )
     }
