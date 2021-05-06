@@ -18,7 +18,7 @@
   margin: 5px;
   font-size: 13px;
   height: 500px;
-  width: 350px;
+  width: auto;
   border-radius: 10px;
   border: none;
   display: flex;
@@ -27,5 +27,4 @@
   justify-content: center;
   box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
   background: rgb(190, 229, 247);
-   cursor: pointer;
  }
