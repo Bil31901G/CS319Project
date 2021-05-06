@@ -6,20 +6,20 @@ import "./GroupTable.css"
 
 export default class GroupTable extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
-        
+
         this.addGroupFrameClickHandler = this.addGroupFrameClickHandler.bind(this)
         this.handleReviewRequest = this.handleReviewRequest.bind(this)
-        
+
     }
 
     state = {
         loading: true,
-        availableGroupIDs : null,
+        availableGroupIDs: null,
     }
-    
-    async componentDidMount(){
+
+    async componentDidMount() {
 
         //Fetch which groups are available to display.
 
@@ -34,15 +34,15 @@ export default class GroupTable extends React.Component {
         // })
         // console.log(data)
         this.setState(
-        {
-            loading: false,
-            availableGroupIDs:[1,2,3,4,5,6,7,8,9,10,11]
-        })
+            {
+                loading: false,
+                availableGroupIDs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+            })
 
     }
 
-    async addGroupFrameClickHandler(){
-         //***************mock key expired. replace************** */
+    async addGroupFrameClickHandler() {
+        //***************mock key expired. replace************** */
         //  var response = fetch("https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/group", {
         //     method: "POST",
         //  })
@@ -51,36 +51,36 @@ export default class GroupTable extends React.Component {
         // console.log("response", result)
         var result = true;
 
-        if(result === true){
+        if (result === true) {
             window.location.reload(); //Not the most elegant way but does the job. lmao
         }
-        else{
+        else {
             alert("An error occured. Add group did not happen.")
         }
     }
 
-    handleReviewRequest(id){
+    handleReviewRequest(id) {
         this.props.handleRevReq(id)
     }
 
-    render(){
+    render() {
 
         var rows = [];
         if (this.state.availableGroupIDs !== null) {
             for (var i = 0; i < (this.state.availableGroupIDs.length); i++) {
                 rows.push(
                     <div key={"col " + i} className="column"  >
-                        <GroupFrame id={this.state.availableGroupIDs[i] } handleReview={this.handleReviewRequest}> </GroupFrame>
+                        <GroupFrame id={this.state.availableGroupIDs[i]} student={this.props.student} handleReview={this.handleReviewRequest}> </GroupFrame>
                     </div>)
             }
         }
-        rows.push(<div key={"AddGroupButton"} className="columnAddGroup" onClick={this.addGroupFrameClickHandler } ><AddGroupFrame > </AddGroupFrame></div>)
-        return( 
+        rows.push(<div key={"AddGroupButton"} className="columnAddGroup" onClick={this.addGroupFrameClickHandler} ><AddGroupFrame > </AddGroupFrame></div>)
+        return (
             <div>{
-                this.state.loading ? 
-                <div>loading...</div> 
-                :
-                <div>{rows}</div>
+                this.state.loading ?
+                    <div>loading...</div>
+                    :
+                    <div>{rows}</div>
             }</div>
 
         )
