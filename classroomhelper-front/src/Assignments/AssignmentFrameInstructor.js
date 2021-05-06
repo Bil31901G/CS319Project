@@ -14,8 +14,10 @@ export default class AssignmentFrameInstructor extends React.Component {
     render() {
         return (
             <>
+                <button9>
                 <h2>Uploaded Assignments</h2>
                 <AssignmentsInstructor id={this.props.id} ></AssignmentsInstructor>
+                </button9>
             </>
         )
     }

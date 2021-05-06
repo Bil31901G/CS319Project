@@ -12,6 +12,7 @@ export default class Home extends React.Component {
     render(){
         return(
             <div className="Home">
+            <button2>
             <header>
               <p>
                 Classroom Helper
@@ -33,7 +34,7 @@ export default class Home extends React.Component {
     
               <Link to="/MyGroup">  <button>Login</button>   </Link>  
               <Link to="/SignUpPageStudent">  <button>Sign-up</button>   </Link>
-           
+            </button2>
           </div>
           )
         ;

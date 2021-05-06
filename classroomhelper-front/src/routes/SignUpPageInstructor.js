@@ -13,6 +13,7 @@ export default class SignUpPageInstructor extends React.Component {
     render() {
         return (
             <div className="Home">
+                <button2>
                 <header>
                     <p>
                         Sign-up
@@ -40,7 +41,7 @@ export default class SignUpPageInstructor extends React.Component {
                 </form>
 
                 <Link to="/CourseRegInstructor">  <button>Sign-up</button>   </Link>
-
+                </button2>
             </div>
         )
             ;

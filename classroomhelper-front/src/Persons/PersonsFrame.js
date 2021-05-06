@@ -13,8 +13,9 @@ export default class PersosnFrame extends React.Component {
     render() {
         return (
             <>
+                <button9>
                 <Persons id={this.props.id} ></Persons>
-
+                </button9>
             </>
         )
     }

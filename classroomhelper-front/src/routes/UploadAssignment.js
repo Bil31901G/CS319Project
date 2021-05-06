@@ -12,6 +12,7 @@ export default class UploadAssignment extends React.Component {
     render() {
         return (
             <div className="Home">
+                <button2>
                 <header>
                     <p>
                         Upload Assignment
@@ -33,7 +34,7 @@ export default class UploadAssignment extends React.Component {
 
 
                 <Link to="/Assignment">  <button>Upload</button>   </Link>
-
+                </button2>
             </div>
         )
             ;
