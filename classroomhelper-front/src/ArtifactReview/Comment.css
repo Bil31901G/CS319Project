@@ -10,14 +10,14 @@
   .evalForm {
     float: left;
     width: auto;
-    padding: 32px;
+    padding: 5px;
     border: 1px solid rgb(255, 255, 255);
     background-color: #ffffff;
     max-width: 300px;
     align-content: left;
   }
 
-  button8 {
+  .button8 {
     margin: 0px;
     font-size: 13px;
     height: 200px;
@@ -31,4 +31,20 @@
     box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
     background: rgb(190, 229, 247);
      cursor: pointer;
+   }
+   .field8 {
+    margin: 0px;
+    font-size: 13px;
+    height: auto;
+    min-height: 250px;
+    width: auto;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
+    background: rgb(190, 229, 247);
+    text-align: left;
    }

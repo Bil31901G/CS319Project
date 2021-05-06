@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css"
-import {Link} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 export default class UploadAssignment extends React.Component {
     
@@ -12,7 +12,12 @@ export default class UploadAssignment extends React.Component {
 
     state = {
         numberOfCriterias: 0,
-        criteriaArray: []
+        criteriaArray: [],
+        uploaded: false
+        //hold array in the form of 
+        //{keys: 
+        // Crtiteria
+        // weight     }
     }
 
     componentDidMount() {
@@ -21,7 +26,15 @@ export default class UploadAssignment extends React.Component {
 
     //When pressed upload sends data to API
     async handleUploadClick(){
+        var descriptionInput = document.getElementsByClassName("UniqueDescription")[0].value
+        var dueDateInput = document.getElementsByClassName("UniqueDuedate")[0].value
+        console.log(descriptionInput)
+            console.log(this.state.criteriaArray);
+        //Fetch function
 
+        this.setState({
+            uploaded: true
+        })
     }
 
     //Takes values from text boxes and adds them to state
@@ -53,6 +66,8 @@ export default class UploadAssignment extends React.Component {
 
 
     render() {
+        if(this.state.uploaded)
+            {return(<Redirect to="/Assignment" />) }
         //Prepare Criterias section
         var criteriasHTML = []
 
@@ -62,7 +77,7 @@ export default class UploadAssignment extends React.Component {
             onClick={() => {
                 this.handleDeleteCriteriaButton(i)
             }} 
-            class="criteriaBox"> 
+            className="criteriaBox"> 
             Criteria:{this.state.criteriaArray[i].criteria}
             <br/>
             Weight:{this.state.criteriaArray[i].weight}
@@ -72,8 +87,8 @@ export default class UploadAssignment extends React.Component {
 
 
         return (
-            <div class="grid-container">
-                <div class="column">
+            <div className="grid-container">
+                <div className="column">
                             <p>
                                 Upload Assignment
                             </p>
@@ -81,27 +96,27 @@ export default class UploadAssignment extends React.Component {
                         <form>
                             <label>
                                 Description:
-                        <input type="text" name="Description" />
+                        <input type="text" className="UniqueDescription" />
                             </label>
                         </form>
 
                         <form>
                             <label>
                                 Due Date:
-                        <input type="text" name="Due Date" />
+                        <input type="date" className="UniqueDuedate" />
                             </label>
                         </form>
 
             
-                        <Link to="/Assignment">  <button class="button" onClick={this.handleUploadClick}>Upload</button>   </Link>
+                        <button className="button" onClick={this.handleUploadClick}>Upload</button>   
 
                 </div>
 
-                <div class="column">
+                <div className="column">
 
                         <form><label> Criteria: <input className="NameField" type="text" name="Criteria" /> </label> </form>
                         <form><label> Weight: <input className="WeightField" type="text" name="Weight" /> </label> </form>
-                        <button class="button" onClick={this.handleAddCriteriaButton}> Add Criteria</button>
+                        <button className="button" onClick={this.handleAddCriteriaButton}> Add Criteria</button>
                         {criteriasHTML}
 
                 </div>

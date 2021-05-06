@@ -38,16 +38,18 @@ export class EvalForm extends React.Component {
             "completeness" : 25
           }
           var rows = []
+          rows.push( <div> Comments: <input></input></div>);
+
           for (const x in gradeingCriteria){
             rows.push(<div> {x}: <input></input> /{gradeingCriteria[x]} </div>);
           }
         return (
             <div className="evalForm">
-                <button2>
-                This is eval form
+                <div className="field8">
+                This is review form
                 <form>{rows}</form>
                 <button onClick={this.submitHandler}>Submit</button>
-                </button2>
+                </div>
             </div>
         )
     }

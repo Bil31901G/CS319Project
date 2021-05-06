@@ -84,8 +84,8 @@ export default class ReviewTable extends React.Component {
                 <button  onClick={this.onClickChangeAR1}> Analyis Report</button>
                 <button  onClick={this.onClickChangeDR1}> Design Report</button>
                 <button  onClick={this.onClickChangeF}> Final Report</button>
-                <button7  onClick={this.onClickChangeAR2}> Analyis Report Iteration 2</button7>
-                <button7  onClick={this.onClickChangeDR2}> Design Report Iteration 2</button7>
+                <button  onClick={this.onClickChangeAR2}> Analyis Report Iteration 2</button>
+                <button  onClick={this.onClickChangeDR2}> Design Report Iteration 2</button>
                 
                 <DocViewerFrame key={this.state.docID} id={this.state.docID}> </DocViewerFrame>
             </div>

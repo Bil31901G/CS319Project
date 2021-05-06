@@ -1,67 +1,78 @@
 import React from 'react'
 import "./Comment.css"
+import EvalForm from "./EvalForm"
 export default class CommentSection extends React.Component {
     
+    state = {
+        //Dummy Data for demo
+        loading: false,
+        criteriaSize: 4,
+        gradeingCriteria: {
+            "diagrams" : 25,
+            "style" :  25,
+            "logic" : 25,
+            "completeness" : 25
+          },
+          comments: [
+            {
+                "comment": "You should be able to do this and that.",
+                "diagrams":25,
+                "style": 22,
+                "logic": 44,
+                "completeness": 82,
+            },
+            {
+                "comment": "Your sequance diagram is wrong Fix it like this.",
+                "diagrams":33,
+                "style": 43,
+                "logic": 88,
+                "completeness": 90,
+            },
+            {
+                "comment": "Please add a dark-mode. If a program does not have a dark mode, its garbage",
+                "diagrams":33,
+                "style": 43,
+                "logic": 88,
+                "completeness": 90,
+            }
+        ]
+    }
+
+    
+
     render() {
-        // console.log(this.props.comments)
-
-        // var commentDiv = []
+        var commentDiv = []
         
-        // for(var i = 0; i < this.props.comments.length(); i++){
-        //     commentDiv.push(
-        //         <div className="column">
-        //             {this.props.comments[i].comment}
-        //             <u1>
-        //                 <li>{this.props.graCrit.keys}</li>
-        //             </u1>
-        //         </div>
-        //     )
-        // }
+        for(var i = 0; i < this.state.comments.length; i++){
+            var commentsInside = []
+            for ( var x in this.state.comments[i]){
+                
+                commentsInside.push(
+                    <div key={i+x}>
+                        {x} : {this.state.comments[i][x]}
+                    </div>
+                )
 
-        //Its 5.20 am. Im gonna hard code this for now. Fetch and soft code later if I will have time.
-        // I did not have time :(
+            }
+            //Has to work this.state.comments.length times
+            commentDiv.push(
+                <div key={"outterDiv"+i} className="column" >
+                    <div className="field8">
+                    <p>Comment {i+1} </p> <br/>
+                        {commentsInside}
+                     </div>
+                 </div>
+            )
+
+        }
+
         return (
+            <>
             <div>
-                <div className="column" >
-                    <button8>
-                    Comment 1 <br></br>
-                     You should do it like this.
-                     <u1 >
-                        <li >"diagrams" : 25 / 100</li>
-                         <li>"style" :  25 / 100</li>
-                         <li>"logic" : 25 / 100</li>
-                         <li>"completeness" : 25 / 100</li>
-                         <li>"Weigted Grade" : 25 / 100</li>
-                     </u1>
-                     </button8>
-                 </div>
-                 <div className="column">
-                    <button8>
-                    Comment 2 <br></br>
-                     You should do it like this.
-                     <u1>
-                        <li>"diagrams" : 25 / 100</li>
-                         <li>"style" :  25 / 100</li>
-                         <li>"logic" : 25 / 100</li>
-                         <li>"completeness" : 25 / 100</li>
-                         <li>"Weigted Grade" : 25 / 100</li>
-                     </u1>
-                     </button8>
-                 </div>
-                 <div className="column">
-                    <button8>
-                    Comment 3 <br></br>
-                     You should do it like this.
-                     <u1>
-                        <li>"diagrams" : 25 / 100</li>
-                         <li>"style" :  25 / 100</li>
-                         <li>"logic" : 25 / 100</li>
-                         <li>"completeness" : 25 / 100</li>
-                         <li>"Weigted Grade" : 25 / 100</li>
-                     </u1>
-                    </button8>
-                 </div>
+                {commentDiv}
             </div>
+            <EvalForm graCrit={this.state.gradeingCriteria}></EvalForm>
+            </>
         )
     }
 }

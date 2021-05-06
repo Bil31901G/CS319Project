@@ -77,7 +77,6 @@
     border-radius: 25px;
   }
 
-/*
   .Home-header {
     background-color: #dadde6;
     min-height: 100vh;
@@ -90,7 +89,7 @@
   }
 
 
-  button {
+  .button {
     margin: 5px;
     font-size: 13px;
     height: 28px;
@@ -102,7 +101,7 @@
      cursor: pointer;
    }
 
-  button7 {
+  .button7 {
     margin: 5px;
     font-size: 15px;
     height: 28px;
@@ -114,7 +113,7 @@
      cursor: pointer;
    }
    
-  button2 {
+  .button2 {
     margin: 0px;
     font-size: 20px;
     height: 400px;
@@ -129,5 +128,3 @@
     background: rgb(190, 229, 247);
      cursor: pointer;
    }
-
-   */

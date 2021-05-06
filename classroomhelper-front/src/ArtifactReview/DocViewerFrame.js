@@ -13,18 +13,6 @@ export default class DocViewerFrame extends React.Component {
     data: {
       pdf: null,
       assignmentID: null,
-      gradeingCriteria: {
-        "diagrams" : 25,
-        "style" :  25,
-        "logic" : 25,
-        "completeness" : 25
-      },
-      comments : [
-        {comment: "Do it like this",
-        grades: [90,91,92,93]},
-        {comment: "Do it like that",
-        grades: [30,31,32,33]}
-      ]
     },
     artifectIDs:[1,2,3,4,5]
   }
@@ -105,12 +93,10 @@ export default class DocViewerFrame extends React.Component {
       return (
         <>
         <div>
-          <embed src={this.state.data} align="left" width="800px" height="1000px" />
+          <embed src={this.state.data} align="left" width="1000px" height="1000px" />
           </div>
         <div>
           <CommentSection graCrit={this.state.data.gradeingCriteria} comments={this.state.data.comments}></CommentSection>
-          <EvalForm graCrit={this.state.data.gradeingCriteria}></EvalForm>
-
         </div>
         </>
       )

@@ -4,7 +4,7 @@ import NavBar from "../NavBar/NavBar"
 import ReviewTable from '../ArtifactReview/ReviewTable';
 
 export default class People extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/People');
     }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import GroupTable from "../Groups/GroupTable";
 import NavBarInstructor from "../NavBar/NavBarInstructor";
 import "./AllGroups.css";
 import GroupTableInstructor from "../Groups/GroupTableInstructor"
