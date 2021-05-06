@@ -10,6 +10,8 @@ export default class GroupTable extends React.Component {
         super(props)
         
         this.addGroupFrameClickHandler = this.addGroupFrameClickHandler.bind(this)
+        this.handleReviewRequest = this.handleReviewRequest.bind(this)
+        
     }
 
     state = {
@@ -57,6 +59,10 @@ export default class GroupTable extends React.Component {
         }
     }
 
+    handleReviewRequest(id){
+        this.props.handleRevReq(id)
+    }
+
     render(){
 
         var rows = [];
@@ -64,7 +70,7 @@ export default class GroupTable extends React.Component {
             for (var i = 0; i < (this.state.availableGroupIDs.length); i++) {
                 rows.push(
                     <div key={"col " + i} className="column"  >
-                        <GroupFrame id={this.state.availableGroupIDs[i]}> </GroupFrame>
+                        <GroupFrame id={this.state.availableGroupIDs[i] } handleReview={this.handleReviewRequest}> </GroupFrame>
                     </div>)
             }
         }
