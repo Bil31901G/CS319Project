@@ -23,6 +23,7 @@ export default class CommentSection extends React.Component {
         return (
             <div>
                 <div className="column" >
+                    <button8>
                     Comment 1 <br></br>
                      You should do it like this.
                      <u1 >
@@ -32,8 +33,10 @@ export default class CommentSection extends React.Component {
                          <li>"completeness" : 25 / 100</li>
                          <li>"Weigted Grade" : 25 / 100</li>
                      </u1>
+                     </button8>
                  </div>
                  <div className="column">
+                    <button8>
                     Comment 2 <br></br>
                      You should do it like this.
                      <u1>
@@ -43,8 +46,10 @@ export default class CommentSection extends React.Component {
                          <li>"completeness" : 25 / 100</li>
                          <li>"Weigted Grade" : 25 / 100</li>
                      </u1>
+                     </button8>
                  </div>
                  <div className="column">
+                    <button8>
                     Comment 3 <br></br>
                      You should do it like this.
                      <u1>
@@ -54,6 +59,7 @@ export default class CommentSection extends React.Component {
                          <li>"completeness" : 25 / 100</li>
                          <li>"Weigted Grade" : 25 / 100</li>
                      </u1>
+                    </button8>
                  </div>
             </div>
         )
