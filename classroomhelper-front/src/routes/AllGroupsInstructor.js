@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBarInstructor from "../NavBar/NavBarInstructor";
 import "./AllGroups.css";
-import GroupTableInstructor from "../Groups/GroupTableInstructor"
+import GroupTable from "../Groups/GroupTable"
 import ReviewTable from "../ArtifactReview/ReviewTable"
 export default class AllGroupsInstructor extends React.Component {
     constructor() {
@@ -10,7 +10,8 @@ export default class AllGroupsInstructor extends React.Component {
     }
 
     state = {
-        reviewID: null
+        reviewID: null,
+        student: 0
     }
 
     componentDidMount() {
@@ -41,7 +42,7 @@ export default class AllGroupsInstructor extends React.Component {
                         All Groups
                     </h1>
 
-                    <GroupTableInstructor handleRevReq={this.handleReviewRequest}></GroupTableInstructor>
+                    <GroupTable student={this.state.student} handleRevReq={this.handleReviewRequest}></GroupTable>
 
                 </div>
 
