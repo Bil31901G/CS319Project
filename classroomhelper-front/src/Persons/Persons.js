@@ -24,7 +24,7 @@ export default class Persons extends React.Component {
             loading: false,
             //dummy datas for assignment list (in course)
             personalInfo: {
-                "id": [21800000, 21800000, 21800000, 21800000], "name": ["zxcz", "asd", "qwe", "asd"]
+                "id": [21842732, 21802586, 21826854, 21804588, 21805300], "name": ["Tuna Dalbeler", "Onur Korkmaz", "Ezgi Saygılı", "Funda Tan", "Cem Öztürk"]
 
             }
         })

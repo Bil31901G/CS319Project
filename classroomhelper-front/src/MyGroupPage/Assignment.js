@@ -26,14 +26,14 @@ export default class Assignment extends React.Component {
             assignmentInfo: { 
                 "id": [1, 2, 3, 4], 
                 "name": 
-                ["Analysis Report (dummy data)",
-                 "Analysis Report (dummy data)",
-                  "Analysis Report (dummy data)",
-                   "Analysis Report (dummy data)"],
-                    "dueDate": ["03.05.2021 (dummy data)",
-                     "03.05.2021 (dummy data)",
-                      "03.05.2021 (dummy data)",
-                       "03.05.2021 (dummy data)"]
+                ["Analysis Report",
+                 "Design Report",
+                  "Analysis Report Iteration 2",
+                   "Design Report Iteration 2"],
+                    "dueDate": ["07.05.2021",
+                     "08.05.2021",
+                      "09.05.2021",
+                       "09.05.2021"]
 
         }})
                 

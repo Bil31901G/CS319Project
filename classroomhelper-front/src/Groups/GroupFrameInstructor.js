@@ -29,11 +29,11 @@ export default class GroupFrameInstructor extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="field6">  
                 <Group id={this.props.id} ></Group>
 
-                <button type="button" disabled>Review </button>
-            </>
+                <button>Review </button>
+            </div>
         )
     }
 }

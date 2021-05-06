@@ -24,7 +24,7 @@ export default class Courses extends React.Component {
             courseInfo: {
                 "courseName": ["CS319"],
                 "section": [1],
-                "Instructor": ["asd"]
+                "Instructor": ["Eray Tüzün"]
             }
         })
     }

@@ -3,16 +3,13 @@ import "./Home.css"
 import { Link } from "react-router-dom";
 
 export default class SignUpPageStudent extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/SignUpPageStudent');
     }
 
-
-
     render() {
         return (
-            <div className="Home">
-                <button2>
+            <div className="field2">
                 <header>
                     <p>
                         Sign-up
@@ -40,7 +37,6 @@ export default class SignUpPageStudent extends React.Component {
                 </form>
 
                 <Link to="/Home">  <button>Sign-up</button>   </Link>
-                </button2>
             </div>
         )
             ;

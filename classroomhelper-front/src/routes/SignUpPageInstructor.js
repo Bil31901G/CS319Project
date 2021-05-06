@@ -4,16 +4,13 @@ import { Link } from "react-router-dom";
 
 
 export default class SignUpPageInstructor extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/SignUpPageInstructor');
     }
 
-
-
     render() {
         return (
-            <div className="Home">
-                <button2>
+            <div className="field2">
                 <header>
                     <p>
                         Sign-up
@@ -41,7 +38,6 @@ export default class SignUpPageInstructor extends React.Component {
                 </form>
 
                 <Link to="/CourseRegInstructor">  <button>Sign-up</button>   </Link>
-                </button2>
             </div>
         )
             ;

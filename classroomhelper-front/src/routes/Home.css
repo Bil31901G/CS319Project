@@ -89,7 +89,7 @@
   }
 
 
-  .button {
+  button {
     margin: 5px;
     font-size: 13px;
     height: 28px;
@@ -113,11 +113,11 @@
      cursor: pointer;
    }
    
-  .button2 {
-    margin: 0px;
+  .field2 {
+    margin: 100px;
     font-size: 20px;
     height: 400px;
-    width: 400px;
+    width: 1000px;
     border-radius: 10px;
     border: none;
     display: flex;
