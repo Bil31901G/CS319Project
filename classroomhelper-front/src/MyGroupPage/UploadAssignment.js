@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export default class UploadAssignment extends React.Component {
 
-  //Şuradan çöktüm https://www.laravelcode.com/post/how-to-upload-files-in-reactjs-with-example
+  //Reference: https://www.laravelcode.com/post/how-to-upload-files-in-reactjs-with-example
 
 
   state = {

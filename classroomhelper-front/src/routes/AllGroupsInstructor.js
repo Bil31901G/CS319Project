@@ -2,6 +2,8 @@ import React from 'react';
 import GroupTable from "../Groups/GroupTable";
 import NavBarInstructor from "../NavBar/NavBarInstructor";
 import "./AllGroups.css";
+import GroupTableInstructor from "../Groups/GroupTableInstructor"
+
 export default class AllGroupsInstructor extends React.Component {
     componentWillMount() {
         this.props.history.push('/AllGroupsInstructor');
@@ -22,7 +24,7 @@ export default class AllGroupsInstructor extends React.Component {
                         All Groups
                     </h1>
 
-                    <GroupTable></GroupTable>
+                    <GroupTableInstructor></GroupTableInstructor>
 
                 </div>
             </>

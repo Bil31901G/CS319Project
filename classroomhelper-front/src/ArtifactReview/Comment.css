@@ -2,19 +2,33 @@
     float: right;
     width: 33.3%;
     padding: 32px;
-    border: 1px solid black;
-    background-color: #d3d3d3;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #ffffff;
     max-width: 300px;
     align-content: left;
   }
   .evalForm {
-    float: right;
+    float: left;
     width: auto;
     padding: 32px;
-    border: 1px solid black;
-    background-color: #d3d3d3;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #ffffff;
     max-width: 300px;
     align-content: left;
   }
-  
-  
+
+  button8 {
+    margin: 0px;
+    font-size: 13px;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 0px 2px rgba (0,0,0,0.3);
+    background: rgb(190, 229, 247);
+     cursor: pointer;
+   }

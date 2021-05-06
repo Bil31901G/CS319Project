@@ -17,7 +17,7 @@ export default class People extends React.Component {
             <div className="People">
             
             <h1>
-                Artifect Review
+                Artifact Review
             </h1>
                 <ReviewTable/>
             </div>
