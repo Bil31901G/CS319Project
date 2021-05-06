@@ -18,7 +18,8 @@ export default class CommentSection extends React.Component {
         //     )
         // }
 
-        //Its 5.20 am. Im gonna hard code this for now. Fetch and soft code later. I will have time.
+        //Its 5.20 am. Im gonna hard code this for now. Fetch and soft code later if I will have time.
+        // I did not have time :(
         return (
             <div>
                 <div className="column" >

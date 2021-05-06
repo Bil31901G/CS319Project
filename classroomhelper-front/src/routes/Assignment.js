@@ -1,18 +1,12 @@
-import { render } from '@testing-library/react';
-import React, { Component } from 'react';
-import "./Course.css"
-import Home from './Home';
-import AssignmentTableInstructor from "../Assignments/AssignmentTableInstructor"
-import NavBarInstructor from "../NavBar/NavBarInstructor"
-import UploadAssignment from "./UploadAssignment";
+import React from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from "react-router-dom";
+import AssignmentTableInstructor from "../Assignments/AssignmentTableInstructor";
+import NavBarInstructor from "../NavBar/NavBarInstructor";
+import "./Course.css";
 export default class Assignment extends React.Component {
-    componentWillMount() {
+    componentDidMount() {
         this.props.history.push('/Assignment');
     }
 

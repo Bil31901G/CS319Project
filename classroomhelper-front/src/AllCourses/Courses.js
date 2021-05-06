@@ -6,7 +6,7 @@ export default class Courses extends React.Component {
         loading: true,
         courseInfo: null
     }
-
+    // Get info for a particulaor course.
     async componentDidMount() {
 
         //This part is commented because, fake database api request has limited usage. 

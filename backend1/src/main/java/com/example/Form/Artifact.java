@@ -1,5 +1,6 @@
 package com.example.Form;
 import com.example.Grades.*;
+import java.io.Serializable;
 import javax.persistence.OneToMany;
 import com.example.Course.Course;
 import com.example.People.*;
@@ -16,9 +17,15 @@ import javax.persistence.Table;
 import javax.persistence.Lob;
 import javax.persistence.ElementCollection;
 import javax.persistence.ManyToOne;
+/*
+ * Artifact objects are generated for every student(or group, depends on type of homework)
+ * after assignment have been created by the instructor. 
+ * Artifacts can be thought as mirrors of assignment for students
+ * All uploaded files by students are instances of artifacts
+ */
 @Entity
 @Table
-public class Artifact {
+public class Artifact implements Serializable{
 	public enum ArtifactStatus{
 		NotSubmitted,
 		Submitted,
@@ -28,19 +35,24 @@ public class Artifact {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	// Explanation of homework
 	private String explanation;
 	
 	private Date date;
 	
+	// Changes if submitted by student and if graded by instructor
 	private ArtifactStatus status;
+	
+	// Grades are database entities due to make displaying statistics in GradeBook easier 
 	@OneToMany
 	private List<Grade> grades;
 	
+	// Empty if group artifact
 	@ManyToOne
 	private People student;
 	
 	@ManyToOne
-	private Group group;
+	private Group group; // Empty if student assignment
 	
 	@ManyToOne
 	private Course course;
@@ -49,8 +61,10 @@ public class Artifact {
 	private Assignment assignment;
 
 	@Lob
-	private byte[] file;
+	private byte[] file; // long blob file
 	public Artifact() {super();}
+	
+	// Construct without student
 	public Artifact(String explanation,
 			Date date,
 			ArtifactStatus status,
@@ -70,6 +84,8 @@ public class Artifact {
 		}
 		this.setGrades(grades);
 	}
+	
+	// Construct without group
 	public Artifact(
 			String explanation,
 			Date date,
@@ -84,6 +100,8 @@ public class Artifact {
 			this.setAssignment(assignment);
 			this.setFile(null);
 		}
+	
+	// Construct both with group and student
 	public Artifact(
 		String explanation,
 		Date date,
@@ -101,6 +119,7 @@ public class Artifact {
 		this.setFile(null);
 	}
 	
+	// sum of grades of criterias
 	public Integer getOverAllGrade() {
 		Integer sum = 0;
 		for(Grade grade: this.getGrades()) {
@@ -108,6 +127,8 @@ public class Artifact {
 		}
 		return sum;
 	}
+	
+	// The value of Assignment in overall grade
 	public Integer getOverAllMaxGrade() {
 		Integer sum = 0;
 		for(Grade grade: this.getGrades()) {
@@ -115,6 +136,9 @@ public class Artifact {
 		}
 		return sum;
 	} 
+	
+	// getters and setters
+	
 	public Course getCourse() {
 		return course;
 	}

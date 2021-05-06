@@ -1,15 +1,7 @@
-import { render } from '@testing-library/react';
-import React, { Component } from 'react';
+import React from 'react';
 import "./Home.css"
-import CourseRegInstructor from './CourseRegInstructor';
+import { Link} from "react-router-dom";
 
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
 export default class InstructorSignUp extends React.Component {
     componentWillMount() {
         this.props.history.push('/InstructorSignUp');

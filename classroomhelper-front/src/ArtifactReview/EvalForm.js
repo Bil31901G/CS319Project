@@ -9,7 +9,24 @@ export class EvalForm extends React.Component {
 
     submitHandler(){
 
-        //Todo
+
+        //Submit part
+
+
+
+         //***************mock key expired. replace************** */
+        //  var response = fetch("https://0fb8886f-8d61-4bc9-9b01-4362a104ed54.mock.pstmn.io/group", {
+        //     method: "POST",
+        //  })
+
+        // var result = (await response).ok;
+        // console.log("response", result)
+        var result = true;
+
+        if(result === true){
+            alert("Submitted")
+        }
+
 
 
     }

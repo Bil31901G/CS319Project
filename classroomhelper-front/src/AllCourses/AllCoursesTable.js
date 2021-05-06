@@ -3,14 +3,14 @@ import AllCoursesFrame from './AllCoursesFrame'
 
 import "./AllCoursesTable.css"
 
-
+// Course info holder.
 export default class AllCoursesTable extends React.Component {
 
     state = {
         loading: true,
         CourseIDs: null
     }
-
+    //Get course ids available.
     async componentDidMount() {
 
         //This part is commented because, fake database api request has limited usage. Change link to api revelant api endpoint.

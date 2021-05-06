@@ -17,8 +17,9 @@ import Assignment from './Assignment';
 import PeopleInstructor from './PeopleInstructor';
 import UploadAssignment from './UploadAssignment';
 import CourseRegInstructor from './CourseRegInstructor';
-import ReviewPage from "../MyGroupPage/PeerReview/PeerReviewPage"
-export default () =>
+import ReviewPage from "../MyGroupPage/PeerReview/PeerReviewPage";
+
+const Router = () =>
     <BrowserRouter>
         <Switch>
             <Route path="/" exact component={FirstPage} />
@@ -40,3 +41,5 @@ export default () =>
             <Route path="/ReviewPage" component={ReviewPage} />
         </Switch>
     </BrowserRouter>;
+
+export default Router

@@ -7,9 +7,6 @@ import CommentSection from './CommentSection';
 import EvalForm from "./EvalForm"
 export default class DocViewerFrame extends React.Component {
 
-  constructor() {
-    super();
-  }
 
   state ={
     loading: true,
@@ -31,7 +28,7 @@ export default class DocViewerFrame extends React.Component {
     },
     artifectIDs:[1,2,3,4,5]
   }
-
+  //Get artifect ids, comments, artifect itself and associated grading criteria from server.
   async componentDidMount(){
     //I could not test this part. Technically it successfully fetchs a pdf. Might need some server spesific settings.
     // var response = await fetch("https://681c5d6a-be24-42b8-b9e7-885328e48bf3.mock.pstmn.io/getPDF?id=1",{
@@ -96,7 +93,7 @@ export default class DocViewerFrame extends React.Component {
       
   }
 
-
+  //Create document viewer, Comment section and Evalutaion form
   render() {
     if(this.state.data.pdf === null && this.state.loading === true){
       return( <div>loading...</div>)
@@ -109,10 +106,11 @@ export default class DocViewerFrame extends React.Component {
         <>
         <div>
           <embed src={this.state.data} align="left" width="800px" height="1000px" />
-          <CommentSection graCrit={this.state.data.gradeingCriteria} comments={this.state.data.comments}></CommentSection>
-        </div>
+          </div>
         <div>
+          <CommentSection graCrit={this.state.data.gradeingCriteria} comments={this.state.data.comments}></CommentSection>
           <EvalForm graCrit={this.state.data.gradeingCriteria}></EvalForm>
+
         </div>
         </>
       )

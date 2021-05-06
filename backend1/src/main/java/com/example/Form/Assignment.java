@@ -18,31 +18,40 @@ import javax.persistence.OneToMany;
 import javax.persistence.JoinColumn;
 import javax.persistence.Embedded;
 import javax.persistence.CollectionTable;
+import java.io.Serializable;
 @Entity
 @Table(name = "Assignment")
-public class Assignment {
+public class Assignment implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	private String explanation;
+	private String explanation; // Explanation of homework
+	
 	@ManyToOne
 	private Course course;
 	
 	private Date date;
 	
 	private AssignmentEnum.AssignmentStatus status;
+	
 	@ElementCollection
-	private List<String> comments;
+	private List<String> comments;// Comments of students for the assignment
+	
+	// Corresponding Artifacts
 	@OneToMany
 	@JoinColumn(name = "artifact_id")
 	private List<Artifact> artifacts = new ArrayList<Artifact>();
+	
+	// Grading Criterias to make grading of artifacts easier
 	@Embedded
 	@ElementCollection
 	@CollectionTable(name="criterias", joinColumns=@JoinColumn(name="ID"))
 	private List<GradingCriteria> criterias = new ArrayList<GradingCriteria>();
 	
 	private AssignmentEnum.AssignmentType type;
+	
+	// Getters and Setters
 	public AssignmentEnum.AssignmentType getType() {
 		return type;
 	}
